@@ -73,9 +73,9 @@ Captures messages that fail to be processed after multiple retry attempts.
 For decoupled architectures where a consumer polls messages, ensuring no message is lost after failures.
 
 ### **Key Points**
-✅ Messages are moved to DLQ after exceeding `maxReceiveCount`.
-✅ Consumers can reprocess messages later.
-✅ Useful for background job processing.
+- ✅ Messages are moved to DLQ after exceeding `maxReceiveCount`.
+- ✅ Consumers can reprocess messages later.
+- ✅ Useful for background job processing.
 
 ---
 
@@ -92,9 +92,9 @@ Captures failed message deliveries to SNS **subscription endpoints** (SQS, Lambd
 When SNS fan-out messages need a backup mechanism for failed deliveries.
 
 ### **Key Points**
-✅ Used only when the **SNS subscriber** (e.g., SQS, Lambda, HTTP) fails to process the message.
-✅ Helps debug undelivered messages in pub-sub models.
-✅ Works at the **subscription level**, meaning each subscriber can have its own DLQ.
+- ✅ Used only when the **SNS subscriber** (e.g., SQS, Lambda, HTTP) fails to process the message.
+- ✅ Helps debug undelivered messages in pub-sub models.
+- ✅ Works at the **subscription level**, meaning each subscriber can have its own DLQ.
 
 ---
 
@@ -111,9 +111,9 @@ Captures events that fail to be delivered to **EventBridge targets** (e.g., Lamb
 When EventBridge rules need a fallback mechanism for undeliverable events.
 
 ### **Key Points**
-✅ Captures failed event deliveries (e.g., due to permission errors, target unavailability).
-✅ Useful for debugging and ensuring event-driven architectures don’t lose data.
-✅ Helps in debugging **why EventBridge rules fail**.
+- ✅ Captures failed event deliveries (e.g., due to permission errors, target unavailability).
+- ✅ Useful for debugging and ensuring event-driven architectures don’t lose data.
+- ✅ Helps in debugging **why EventBridge rules fail**.
 
 ---
 
